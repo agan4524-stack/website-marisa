@@ -167,7 +167,7 @@ if (bioCard) {
             title: 'Pssttt... 🤫',
             text: 'Sebenernya website ini dibuat khusus buat nemenin kamu lho. Jangan bosen-bosen mampir ya!',
             iconHtml: '❤️',
-            confirmButtonText: 'Iya, pm! 🧸',
+            confirmButtonText: 'Iya! 🧸',
             confirmButtonColor: '#ffb3c1'
         });
     });
