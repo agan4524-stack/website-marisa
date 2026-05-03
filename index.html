@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Introvert's Cloud - Personal Website</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 untuk Notifikasi -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link ke CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Floating Background Objects -->
+    <div class="floating-icon" style="top: 15%; left: 10%;"><i data-lucide="book" size="60"></i></div>
+    <div class="floating-icon" style="top: 40%; right: 10%;"><i data-lucide="ghost" size="50"></i></div>
+    <div class="floating-icon" style="top: 70%; left: 5%;"><i data-lucide="star" size="40"></i></div>
+    <div class="floating-icon" style="bottom: 10%; right: 15%;"><i data-lucide="headphones" size="55"></i></div>
+
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="navbar-brand brand-font" href="#">☁️ nook.</a>
+            <div class="d-flex gap-4">
+               <a href="#" id="coffeeBtn" class="text-decoration-none text-dark opacity-75">
+    <i data-lucide="coffee" size="20"></i>
+</a>
+                <a href="#" id="nightModeBtn" class="text-decoration-none text-dark opacity-75"><i data-lucide="moon" size="20"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-v3 container">
+        <div class="avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=687" alt="Profile" class="avatar-img">
+            <div class="avatar-emoji">📖</div>
+        </div>
+
+        <div class="status-pill">
+            <div class="status-dot"></div>
+            Lagi asik "me-time" sendirian
+        </div>
+
+        <h1 class="display-3 mb-3">Selamat datang di <span>Dunia Rahasia</span>.</h1>
+        <p class="hero-desc mx-auto">
+            Tempat di mana imajinasi lebih nyaring dari kebisingan di luar. Aku suka segala sesuatu yang lucu, aroma buku tua, dan ketenangan yang panjang.
+        </p>
+
+        <div class="bento-grid">
+            <div class="bento-item bento-1">
+                <i data-lucide="sparkles" size="48" class="mb-3"></i>
+                <h2>Spoiler Tentang Aku</h2>
+                <p>90% waktuku habis di dunia khayalan, 10% sisanya mencari di mana terakhir kali menaruh pembatas buku.</p>
+                <button class="btn btn-spoiler" id="spoilerBtn">Klik Untuk Rahasia ✨</button>
+                <div id="secretFact" class="secret-fact">Psst.. Aku bisa menghabiskan 5 jam di toko buku tanpa merasa bosan!</div>
+            </div>
+
+            <div class="bento-item bento-2">
+                <div class="icon-bg">
+                    <i data-lucide="book-heart" size="32" style="color: #b392f0"></i>
+                </div>
+                <div>
+                    <h3 class="mb-1">Koleksi Bacaan</h3>
+                    <p class="text-muted">Dari novel fantasi yang ajaib sampai puisi yang menenangkan jiwa.</p>
+                </div>
+            </div>
+
+            <div class="bento-item bento-3 text-white">
+                <span style="font-size: 2.8rem; margin-bottom: 10px;">🧸</span>
+                <h3 class="m-0">Mood</h3>
+                <p>Cozy & Chill</p>
+            </div>
+
+            <div class="bento-item bento-4 text-white">
+                <i data-lucide="battery-medium" size="32" class="mb-2"></i>
+                <h3 class="m-0">Baterai Sosial</h3>
+                <p>Butuh Charge</p>
+            </div>
+            
+            <!-- FITUR MUSIC PLAY -->
+            <div class="bento-item bento-music" id="playMusicBtn" style="cursor: pointer;">
+                 <div class="icon-bg-small">
+                    <i data-lucide="play" id="musicIcon" size="24"></i>
+                </div>
+                <p class="m-0"><strong>Lagi Dengerin:</strong> Rayuan perempuan gila - Nadin Amizah 🎧</p>
+            </div>
+        </div>
+        <!-- Section: My Little Secret Card (Biodata) -->
+<section class="container mt-5">
+    <div class="row g-4">
+        <!-- Kartu Utama Biodata -->
+        <div class="col-md-8">
+            <div class="bento-item text-start h-100" style="background: linear-gradient(135deg, #fff5f5 0%, #fff0f3 100%); border: 1px dashed #ffb3c1;">
+                <h3 class="brand-font mb-3">🧸 Tentang Pemilik Awan Ini</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><strong>Nama:</strong> Ra (atau panggil aja "Sapa")</li>
+                            <li class="mb-2"><strong>Hobi:</strong> Bengong, Baca Buku, & Cari Lagu Galau</li>
+                            <li class="mb-2"><strong>Kelemahan:</strong> Es Krim Matcha & Chat singkat</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><strong>Zodiak:</strong> Pisces 🌊</li>
+                            <li class="mb-2"><strong>Mbti:</strong> INFP (Si Tukang Khayal)</li>
+                            <li class="mb-2"><strong>Love Language:</strong> Quality Time & Words</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="small mt-2 italic text-muted">"Aku mungkin pendiam, tapi di kepalaku, kita udah keliling dunia bareng." ✨</p>
+            </div>
+        </div>
+
+        <!-- Kartu Jam Tidur -->
+        <div class="col-md-4">
+            <div class="bento-item h-100 d-flex flex-column justify-content-center align-items-center" style="background: #2d3436; color: #dfe6e9;">
+                <i data-lucide="moon-star" size="40" class="mb-2" style="color: #f1c40f;"></i>
+                <h4 class="brand-font">Night Owl</h4>
+                <p class="small text-center opacity-75">Sering bangun jam 2 pagi cuma buat mikirin hal random.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <div class="mt-4">
+            <button class="btn btn-main" id="greetBtn">Sapa Aku Pelan-pelan 👋</button>
+        </div>
+    </section>
+
+    <!-- Fitur: Rak Buku -->
+    <section class="container mt-5 pt-5">
+        <h2 class="brand-font mb-4 text-center">📖 Rak Buku Kecilku</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="bento-item text-start">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge rounded-pill bg-warning text-dark">Sedang Dibaca</span>
+                        <small class="text-muted">75%</small>
+                    </div>
+                    <h4 class="brand-font">The Starless Sea</h4>
+                    <p class="small text-muted mb-3">Erin Morgenstern</p>
+                    <div class="progress" style="height: 10px; border-radius: 10px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="bento-item text-start">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge rounded-pill bg-success text-white">Selesai</span>
+                        <i data-lucide="check-circle" class="text-success" size="18"></i>
+                    </div>
+                    <h4 class="brand-font">Hujan Bulan Juni</h4>
+                    <p class="small text-muted mb-0">Sapardi Djoko Damono</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur: Social Battery -->
+    <section class="mt-5 py-5">
+        <div class="bento-item mx-auto text-center" style="max-width: 500px; background: var(--soft-lavender);">
+            <h3 class="brand-font mb-3">🔋 Social Battery Hari Ini</h3>
+            <div class="battery-container my-4">
+                <div id="batteryLevel" class="battery-filling"></div>
+            </div>
+            <p id="batteryStatus" class="fw-bold">Lagi pengen sendirian dulu...</p>
+            <button class="btn btn-sm btn-outline-dark rounded-pill mt-2" onclick="rechargeBattery()">Recharge with Coffee ☕</button>
+        </div>
+    </section>
+
+    <!-- Fitur: Playlist On Repeat -->
+    <section class="container mt-5 pb-5">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="bento-item h-100" id="playlistCard" style="background: #1DB954; color: white;">
+                    <h4 class="brand-font mb-3">🎵 On Repeat</h4>
+                    <div class="d-flex align-items-center gap-3 bg-white bg-opacity-25 p-3 rounded-4">
+                        <div class="music-wave">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="text-start">
+                            <p class="mb-0 fw-bold" id="currentSong">Rayuan perempuan gila</p>
+                            <p class="small mb-0 opacity-75" id="currentArtist">Nadin Amizah</p>
+                        </div>
+                    </div>
+                    <p class="small mt-3" id="currentQuote">"Lagu paling pas buat nemenin baca buku pas hujan."</p>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="bento-item h-100 text-start">
+                    <h4 class="brand-font mb-3">📝 Catatan Kecil</h4>
+                    <div class="note-entry mb-3">
+                        <small class="text-muted">3 Mei 2026</small>
+                        <p class="mb-0">"Ternyata aroma buku baru itu lebih enak daripada wangi parfum apapun. Ada yang setuju?"</p>
+                    </div>
+                    <hr class="opacity-25">
+                    <div class="note-entry">
+                        <small class="text-muted">1 Mei 2026</small>
+                        <p class="mb-0">"Hari ini baterai sosial habis total, tapi dapet 2 bab novel fantasi. Worth it!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur: Message Box -->
+    <section class="container mt-5 pb-5">
+        <h2 class="brand-font mb-4 text-center">✉️ Kirim Pesan Rahasia</h2>
+        <div class="bento-item mx-auto" style="max-width: 700px; background: white;">
+            <p class="text-muted small mb-4 text-center">Punya sesuatu yang mau diomongin? Tulis di sini ya, aku baca kok!</p>
+            <form id="messageForm">
+                <div class="mb-3">
+                    <textarea class="form-control border-0 bg-light p-4" id="userMsg" rows="4" placeholder="Tulis pesanmu di sini..." style="border-radius: 20px; resize: none;"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-main px-5">Kirim Ke WhatsApp ☁️</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Tinggal di balik tumpukan buku sejak 2005. <br> Dirakit dengan ❤️ oleh Ra.</p>
+    </footer>
+
+    <!-- Bootstrap & JS Eksternal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Elemen musik tersembunyi -->
+<audio id="myAudio">
+    <source src="assets/lagu.mp4" type="audio/mpeg">
+    Browser kamu tidak mendukung elemen audio.
+</audio>
+</body>
+</html>
