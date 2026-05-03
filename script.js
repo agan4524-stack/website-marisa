@@ -88,7 +88,7 @@ if (msgForm) {
     msgForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const messageText = document.getElementById('userMsg').value;
-        const phoneNumber = "628123456789"; // GANTI DENGAN NOMOR DIA
+        const phoneNumber = "6283121858630"; // GANTI DENGAN NOMOR DIA
 
         if (messageText.trim() === "") {
             Swal.fire('Eits!', 'Isi dulu pesannya yaa..', 'warning');
@@ -167,7 +167,7 @@ if (bioCard) {
             title: 'Pssttt... 🤫',
             text: 'Sebenernya website ini dibuat khusus buat nemenin kamu lho. Jangan bosen-bosen mampir ya!',
             iconHtml: '❤️',
-            confirmButtonText: 'Iya, Ra! 🧸',
+            confirmButtonText: 'Iya, pm! 🧸',
             confirmButtonColor: '#ffb3c1'
         });
     });
