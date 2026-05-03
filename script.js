@@ -69,15 +69,17 @@ function rechargeBattery() {
 }
 
 // 6. Ghost Interaction (Easter Egg)
-const ghostIcon = document.querySelector('[data-lucide="ghost"]');
-if (ghostIcon) {
-    ghostIcon.parentElement.addEventListener('click', (e) => {
+// Easter Egg: Ghost Interaction yang lebih akurat
+const ghostBtn = document.getElementById('ghostBtn');
+if (ghostBtn) {
+    ghostBtn.addEventListener('click', (e) => {
         e.preventDefault();
         Swal.fire({
             title: 'Boo! 👻',
             text: 'Tenang, hantunya juga introvert. Dia cuma mau nemenin baca buku tanpa ngajak ngobrol kok.',
             showConfirmButton: false,
-            timer: 2500
+            timer: 3000,
+            background: '#f8f9fa'
         });
     });
 }
