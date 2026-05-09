@@ -226,3 +226,14 @@ body.night-mode .badge {
 .btn-main {
     transition: all 0.3s ease;
 }
+.bg-soft-pink {
+    background-color: #ffb3c1;
+}
+
+.bento-item {
+    transition: transform 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+}
