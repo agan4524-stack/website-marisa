@@ -206,3 +206,50 @@ if (coffeeBtn) {
         });
     });
 }
+// 1. Data Drakor (Tinggal tambah di sini kalau ada judul baru)
+const dataDrakor = [
+    {
+        judul: "Hometown Cha-Cha-Cha",
+        tag: "Healing",
+        desc: "Definisi 'rumah' dalam bentuk serial. Pemandangan desa Gongjin selalu bikin tenang.",
+        img: "https://images.unsplash.com/photo-15120706327b2-ac7c52a3935d?w=400",
+        warna: "#ffb3c1"
+    },
+    {
+        judul: "Our Beloved Summer",
+        tag: "Life",
+        desc: "Cocok buat ditonton pas hujan. Vibes-nya sangat introvert-friendly!",
+        img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400",
+        warna: "#92e3a9"
+    },
+    {
+        judul: "Reply 1988",
+        tag: "Family",
+        desc: "Nonton ini berasa punya keluarga kedua di Ssangmun-dong.",
+        img: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=400",
+        warna: "#a2d2ff"
+    }
+];
+
+// 2. Fungsi untuk menampilkan ke HTML
+const renderDrakor = () => {
+    const container = document.getElementById('drakorContainer');
+    
+    const htmlContent = dataDrakor.map(drama => `
+        <div class="col-md-4">
+            <div class="bento-item p-0 overflow-hidden h-100">
+                <img src="${drama.img}" class="img-fluid w-100" style="height: 180px; object-fit: cover;" alt="${drama.judul}">
+                <div class="p-3 text-start">
+                    <span class="badge mb-2" style="background-color: ${drama.warna}; color: #333;">${drama.tag}</span>
+                    <h5 class="brand-font">${drama.judul}</h5>
+                    <p class="small text-muted mb-0">${drama.desc}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    container.innerHTML = htmlContent;
+};
+
+// 3. Jalankan fungsi saat halaman load
+document.addEventListener('DOMContentLoaded', renderDrakor);
